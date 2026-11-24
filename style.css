@@ -1,0 +1,200 @@
+/* 1. Seletor universal: remove margens e espaçamentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Rolagem suave ao clicar nos links do menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3. Formatação dos links */
+a {
+    text-decoration: none;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.3em;
+    color: #15151E;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+/* 4. Efeito ao passar o mouse */
+a:hover {
+    color: #E10600;
+}
+
+/* 5. Menu */
+.menu {
+    width: 100%;
+    height: 15vh;
+    box-sizing: border-box;
+    padding-top: 1vh;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.logo {
+    width: 20%;
+    height: 13vh;
+    float: left;
+}
+
+.logo img {
+    width: 80%;
+    height: auto;
+}
+
+.nav {
+    width: 80%;
+    height: 13vh;
+    float: left;
+    padding-top: 6vh;
+    box-sizing: border-box;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding-left: 15%;
+    box-sizing: border-box;
+}
+
+.nav ul li {
+    display: inline;
+    padding-right: 10%;
+}
+
+/* 6. Banner (coloque a foto em imagens-F1/fundo-F1.jpg) */
+.banner {
+    width: 100%;
+    height: 85vh;
+    background-color: #15151E;
+    background-image: url('./imagens-F1/fundo-F1.jpg');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-top: 28vh;
+}
+
+.banner h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    line-height: 1.05;
+    color: #FFFFFF;
+    border-left: 8px solid #E10600;
+    padding-left: 20px;
+}
+
+/* 7. Posicionamento lado a lado com float */
+.p_esq {
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+
+.p_dir {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 15%;
+    padding-top: 8%;
+}
+
+.d_esq {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 15%;
+    padding-top: 8%;
+}
+
+.d_dir {
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+
+/* 8. Formatação dos textos */
+.texto {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 10%;
+}
+
+/* Imagens das seções (aceita os dois nomes de classe) */
+.img_carro,
+.img_capacete,
+.imagens-F1 {
+    width: 70%;
+    height: auto;
+    border: 1px dashed #CCCCCC;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 9. Rodapé */
+.rodape {
+    clear: both;
+    width: 100%;
+    height: 15vh;
+    background-color: #15151E;
+    padding-top: 1vh;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.r_esq {
+    width: 45%;
+    height: 13vh;
+    background-color: #15151E;
+    border-right: 1px solid #FFFFFF;
+    float: left;
+    padding-left: 20%;
+    box-sizing: border-box;
+}
+
+.r_dir {
+    width: 45%;
+    height: 13vh;
+    background-color: #15151E;
+    float: left;
+    padding-left: 10%;
+    padding-top: 1%;
+    box-sizing: border-box;
+}
+
+.logo_rodape {
+    width: 30%;
+    height: auto;
+}
+
+.r_dir ul {
+    list-style-type: none;
+    color: #fff;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.2em;
+}
+
+/* EXTRA: ajuste para telas pequenas (celular) */
+@media (max-width: 700px) {
+    .p_esq, .p_dir, .d_esq, .d_dir {
+        width: 100%;
+        height: auto;
+        padding-left: 10%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+    .p_dir, .d_esq { padding-right: 10%; }
+    .banner h1 { font-size: 2.2em; }
+    a { font-size: 0.9em; }
+    .nav ul { padding-left: 0; }
+    .nav ul li { padding-right: 6%; }
+    .rodape { height: auto; padding-bottom: 2vh; }
+    .r_esq, .r_dir { width: 100%; height: auto; border-right: none; padding: 2% 8%; }
+    .logo_rodape { width: 40%; }
+}
